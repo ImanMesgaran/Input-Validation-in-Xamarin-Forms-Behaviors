@@ -6,7 +6,12 @@ namespace DevenvExeBehaviors.Behaviors
     public class CompareValidationBehavior : Behavior<Entry>
     {
        
-        public static BindableProperty TextProperty = BindableProperty.Create<CompareValidationBehavior, string>(tc => tc.Text, string.Empty, BindingMode.TwoWay);
+        //public static BindableProperty TextProperty = BindableProperty.Create<CompareValidationBehavior, string>(tc => tc.Text, string.Empty, BindingMode.TwoWay);
+
+        //Should Replace with this newer Version that I Come With.
+        public static BindableProperty TextProperty =
+            BindableProperty.Create(nameof(Text), typeof(string), typeof(CompareValidationBehavior), string.Empty, BindingMode.TwoWay);
+
 
         public string Text
         {
